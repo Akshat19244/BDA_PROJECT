@@ -1,2 +1,2 @@
 # BDA_PROJECT
-A multi type recommendation providing movie recommendation sytem
+This project builds an end-to-end, scalable Movie Recommendation System leveraging the TMDB dataset. It combines three distinct recommendation strategies: a Chart-Based Weighted Rating engine (IMDB formula), Content-Based Filtering using TF-IDF on movie overviews and CountVectorizer on a metadata soup (cast + keywords + genres + director), and Collaborative Filtering through SVD matrix factorization via the Surprise library. The preprocessing pipeline is built on Apache PySpark for distributed execution, parsing nested JSON fields, applying custom UDFs, and writing processed output to Parquet format. The ML models run on scikit-learn and Surprise, with 5-fold cross-validation for evaluation.
